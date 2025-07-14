@@ -13,7 +13,7 @@ void main_signals();
 
 int main(int argc, char **argv)
 {
-  if(!strcmp(argv[1], "-g")) { debug_set(1); }
+  if((argc > 1) && !strcmp(argv[1], "-g")) { debug_set(1); }
   main_signals();
   main_loop();
   return 0;
