@@ -22,7 +22,7 @@ $(PROGRAM): $(COBJECTS)
 	$(LDCC) -o $@ $^ $(LDFLAGS)
 
 run: $(PROGRAM)
-	./$< -g 2>cra-debug.log
+	./$<
 
 debug: $(PROGRAM)
 	./$< -g 2>cra-debug.log
