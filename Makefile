@@ -14,7 +14,8 @@ LDCC     = cc
 LDFLAGS  = $(LDOPT) $(LDDIR) $(LDLIB)
 LDOPT    = 
 LDDIR    = 
-LDLIB    = -lncurses
+LDLIB    = -static -lncurses -ltermcap
+#LDLIB    = -lgcc_s -lncurses
 
 all: $(PROGRAM)
 

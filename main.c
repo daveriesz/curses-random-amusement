@@ -22,11 +22,13 @@ int main(int argc, char **argv)
 int continue_loop = 1;
 void main_loop()
 {
-  for ( ; continue_loop != 0 ; )
+  int ii;
+  debug("main loop\n");
+  for (ii=0 ; continue_loop != 0 ; ii++)
   {
     display();
     usleep(1000);
-    debug("main loop\n");
+    if(!(ii%1000)) { debug("... still running\n"); }
   }
 }
 

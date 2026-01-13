@@ -16,6 +16,7 @@ static int scr_H = -1; /* y */
 static int scr_WH = -1;
 void display_initialize()
 {
+  debug("display_initialize()\n");
   srand(clock());
 
   initscr();
@@ -30,6 +31,7 @@ void display_initialize()
 
 void display_uninitialize()
 {
+  debug("display_uninitialize()\n");
   curs_set(1);
   endwin();
 }
